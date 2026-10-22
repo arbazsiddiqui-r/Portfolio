@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Road Rules Quiz</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="wrap">
+
+    <!-- start screen -->
+    <section id="startScreen" class="card">
+      <h1>ROAD<br>RULES<br>QUIZ</h1>
+      <p>Practice for your learner's licence test. 8 questions, pick one answer for each.</p>
+      <button id="startBtn" class="big">Start</button>
+    </section>
+
+    <!-- question screen -->
+    <section id="quizScreen" class="card hidden">
+      <div class="topLine">
+        <span id="qNumber"></span>
+        <span id="scoreNow"></span>
+      </div>
+      <div class="bar"><div id="barFill"></div></div>
+
+      <h2 id="question"></h2>
+      <div id="options"></div>
+
+      <p id="feedback"></p>
+      <button id="nextBtn" class="big hidden">Next</button>
+    </section>
+
+    <!-- result screen -->
+    <section id="endScreen" class="card hidden">
+      <h2>Quiz over</h2>
+      <p class="bigScore"><span id="finalScore"></span> / 8</p>
+      <p id="finalMsg"></p>
+      <button id="againBtn" class="big">Try again</button>
+    </section>
+
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

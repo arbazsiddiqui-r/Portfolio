@@ -1,0 +1,153 @@
+/* Pocket Money Diary - notebook look */
+
+body {
+  margin: 0;
+  background: #e9dfc9;
+  font-family: "Courier New", Courier, monospace;
+  color: #3b2f22;
+  padding: 30px 12px;
+}
+
+.notebook {
+  max-width: 640px;
+  margin: 0 auto;
+  background: #fffdf5;
+  padding: 28px 30px 30px 60px;
+  border: 1px solid #cfc3a5;
+  border-left: 6px double #c0584a;   /* the red margin line */
+  box-shadow: 4px 4px 0 #cfc3a5;
+}
+
+h1 {
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+
+.sub {
+  margin: 4px 0 20px;
+  font-size: 14px;
+  color: #7a6a55;
+}
+
+.totals {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.box {
+  flex: 1;
+  border: 2px solid #3b2f22;
+  padding: 8px 10px;
+  text-align: center;
+}
+
+.box span {
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.box strong {
+  font-size: 20px;
+}
+
+#incomeTotal { color: #2e7d4f; }
+#expenseTotal { color: #b5442f; }
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+input, select {
+  font-family: inherit;
+  font-size: 14px;
+  padding: 7px;
+  border: 1px solid #3b2f22;
+  background: #fff;
+}
+
+#title { flex: 2 1 200px; }
+#amount { flex: 1 1 90px; }
+
+button {
+  font-family: inherit;
+  font-size: 14px;
+  padding: 7px 16px;
+  background: #3b2f22;
+  color: #fffdf5;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #b5442f;
+}
+
+.filterRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+#clearBtn {
+  margin-left: auto;
+  background: transparent;
+  color: #b5442f;
+  border: 1px dashed #b5442f;
+}
+
+#clearBtn:hover {
+  background: #b5442f;
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 0;
+  border-bottom: 1px solid #d9cfb4;
+}
+
+li .name { flex: 1; }
+li .tag {
+  font-size: 11px;
+  border: 1px solid #7a6a55;
+  padding: 1px 6px;
+  color: #7a6a55;
+}
+li .money { font-weight: bold; }
+li.expense .money { color: #b5442f; }
+li.income .money { color: #2e7d4f; }
+
+li .del {
+  padding: 2px 8px;
+  background: none;
+  color: #999;
+  font-size: 16px;
+}
+li .del:hover { color: #b5442f; background: none; }
+
+#emptyMsg {
+  text-align: center;
+  color: #9b8d75;
+  font-style: italic;
+}
+
+@media (max-width: 500px) {
+  .notebook { padding-left: 28px; }
+  .totals { flex-direction: column; }
+}

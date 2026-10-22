@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exam Week Board</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Exam Week Board</h1>
+    <p>Stick your study tasks here. Peel them off when done.</p>
+  </header>
+
+  <section class="addBar">
+    <input type="text" id="taskText" placeholder="Chapter / topic to study">
+    <input type="text" id="subject" placeholder="Subject">
+    <input type="date" id="dueDate">
+    <select id="level">
+      <option value="high">Urgent</option>
+      <option value="mid" selected>Normal</option>
+      <option value="low">Relaxed</option>
+    </select>
+    <button id="addBtn">Stick it</button>
+  </section>
+
+  <p id="counter"></p>
+
+  <main id="board"></main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

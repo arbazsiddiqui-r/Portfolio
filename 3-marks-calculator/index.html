@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report Card Calculator</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="sheet">
+    <div class="top">
+      <h1>Semester Report Card</h1>
+      <p>Enter your marks and check your percentage and grade</p>
+    </div>
+
+    <label class="nameRow">
+      Student name:
+      <input type="text" id="studentName" placeholder="Your name">
+    </label>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Marks got</th>
+          <th>Out of</th>
+          <th>%</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    </table>
+
+    <div class="actions">
+      <button id="addRow">+ Add subject</button>
+      <button id="calc" class="main">Calculate result</button>
+    </div>
+
+    <div id="result" class="hidden">
+      <h2 id="resultName"></h2>
+      <div class="resultGrid">
+        <div><span>Total</span><b id="total"></b></div>
+        <div><span>Percentage</span><b id="percent"></b></div>
+        <div><span>Grade</span><b id="grade"></b></div>
+        <div><span>Status</span><b id="status"></b></div>
+      </div>
+      <p id="remark"></p>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+/* Report Card Calculator - looks like a school mark sheet */
+
+body {
+  margin: 0;
+  background: #dfe5ee;
+  font-family: Georgia, "Times New Roman", serif;
+  color: #1b2a49;
+  padding: 30px 12px;
+}
+
+.sheet {
+  max-width: 700px;
+  margin: 0 auto;
+  background: #fff;
+  border: 3px double #1b2a49;
+  padding: 24px 28px 30px;
+}
+
+.top {
+  text-align: center;
+  border-bottom: 3px solid #f2b705;
+  padding-bottom: 12px;
+  margin-bottom: 18px;
+}
+
+.top h1 {
+  margin: 0;
+  font-size: 26px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.top p {
+  margin: 6px 0 0;
+  font-style: italic;
+  font-size: 14px;
+}
+
+.nameRow {
+  display: block;
+  margin-bottom: 16px;
+  font-weight: bold;
+}
+
+.nameRow input {
+  margin-left: 8px;
+  width: 60%;
+  border: none;
+  border-bottom: 1px solid #1b2a49;
+  font-family: inherit;
+  font-size: 16px;
+  padding: 3px;
+  outline: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background: #1b2a49;
+  color: #fff;
+  padding: 8px;
+  font-size: 14px;
+  text-align: left;
+}
+
+td {
+  border: 1px solid #9aa5bb;
+  padding: 4px;
+}
+
+td input {
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  padding: 6px;
+  font-family: inherit;
+  font-size: 15px;
+  background: transparent;
+}
+
+td input:focus {
+  outline: 2px solid #f2b705;
+}
+
+td.pct {
+  text-align: center;
+  width: 60px;
+  font-weight: bold;
+}
+
+td.rm {
+  width: 34px;
+  text-align: center;
+}
+
+.rm button {
+  border: none;
+  background: none;
+  color: #b00020;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.actions {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.actions button {
+  font-family: inherit;
+  font-size: 15px;
+  padding: 9px 16px;
+  border: 2px solid #1b2a49;
+  background: #fff;
+  color: #1b2a49;
+  cursor: pointer;
+}
+
+.actions button:hover {
+  background: #eef1f7;
+}
+
+.actions button.main {
+  background: #f2b705;
+  font-weight: bold;
+}
+
+.actions button.main:hover {
+  background: #d9a200;
+}
+
+#result {
+  margin-top: 24px;
+  border: 2px solid #1b2a49;
+  padding: 14px 18px;
+}
+
+#result h2 {
+  margin: 0 0 12px;
+  font-size: 20px;
+}
+
+.resultGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  text-align: center;
+}
+
+.resultGrid span {
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #55607a;
+}
+
+.resultGrid b {
+  font-size: 22px;
+}
+
+#remark {
+  margin: 14px 0 0;
+  font-style: italic;
+}
+
+.hidden { display: none; }
+.pass { color: #1b7a3a; }
+.fail { color: #b00020; }
+
+@media (max-width: 520px) {
+  .resultGrid { grid-template-columns: 1fr 1fr; }
+  .nameRow input { width: 90%; margin: 6px 0 0; }
+}

@@ -1,0 +1,128 @@
+/* Road Rules Quiz - bold, flat, thick black borders */
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #ff8a1f;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: #111;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 520px;
+}
+
+.card {
+  background: #fff;
+  border: 4px solid #111;
+  box-shadow: 8px 8px 0 #111;
+  padding: 26px;
+}
+
+h1 {
+  font-size: 54px;
+  line-height: 0.95;
+  margin: 0 0 14px;
+  font-weight: 900;
+}
+
+h2 {
+  margin: 14px 0;
+  font-size: 22px;
+  line-height: 1.3;
+}
+
+p { line-height: 1.4; }
+
+.big {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px 28px;
+  background: #ffe135;
+  border: 4px solid #111;
+  box-shadow: 4px 4px 0 #111;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.big:hover {
+  background: #fff;
+}
+
+.big:active {
+  box-shadow: 0 0 0 #111;
+  transform: translate(4px, 4px);
+}
+
+.topLine {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.bar {
+  height: 14px;
+  border: 3px solid #111;
+}
+
+#barFill {
+  height: 100%;
+  width: 0;
+  background: #111;
+  transition: width 0.3s;
+}
+
+#options button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 10px;
+  padding: 12px 14px;
+  font-size: 16px;
+  background: #fff;
+  border: 3px solid #111;
+  cursor: pointer;
+}
+
+#options button:hover:not(:disabled) {
+  background: #ffe135;
+}
+
+#options button:disabled {
+  cursor: default;
+}
+
+#options button.right {
+  background: #5ee06b;
+}
+
+#options button.wrong {
+  background: #ff5c5c;
+}
+
+#feedback {
+  font-weight: bold;
+  min-height: 22px;
+  margin: 4px 0 14px;
+}
+
+.bigScore {
+  font-size: 64px;
+  font-weight: 900;
+  margin: 10px 0;
+}
+
+.hidden { display: none; }
+
+@media (max-width: 420px) {
+  h1 { font-size: 42px; }
+  .card { padding: 18px; }
+}
