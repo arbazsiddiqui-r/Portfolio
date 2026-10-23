@@ -268,6 +268,49 @@ if (
     });
 
 }
+
+/* Projects modal */
+const showProjectsButton = document.getElementById("showAllProjects");
+const projectsModal = document.getElementById("projectsModal");
+const closeProjectsButton = document.getElementById("closeProjectsModal");
+
+let previousFocusedElement = null;
+
+function openProjectsModal() {
+  if (!projectsModal) return;
+
+  previousFocusedElement = document.activeElement;
+  projectsModal.classList.add("is-open");
+  projectsModal.setAttribute("aria-hidden", "false");
+  document.body.classList.add("projects-modal-open");
+  closeProjectsButton?.focus();
+}
+
+function closeProjectsModal() {
+  if (!projectsModal) return;
+
+  projectsModal.classList.remove("is-open");
+  projectsModal.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("projects-modal-open");
+
+  if (previousFocusedElement instanceof HTMLElement) {
+    previousFocusedElement.focus();
+  }
+}
+
+showProjectsButton?.addEventListener("click", openProjectsModal);
+closeProjectsButton?.addEventListener("click", closeProjectsModal);
+
+projectsModal?.querySelectorAll("[data-close-projects]").forEach(element => {
+  element.addEventListener("click", closeProjectsModal);
+});
+
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape" && projectsModal?.classList.contains("is-open")) {
+    closeProjectsModal();
+  }
+});
+
 // Education cards animation
 gsap.utils.toArray(".education-card").forEach((card, index) => {
     gsap.from(card, {
